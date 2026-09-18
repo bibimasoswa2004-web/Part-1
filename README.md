@@ -1,18 +1,22 @@
-# Seeds of Kindness - WEDE5020 Part 1
+## Part 2 - CSS Styling and Responsive Design
 
-Student: Bibi Masoswa
-Module: WEDE5020
-Organization: Seeds of Kindness - Johannesburg NPO
+### Changelog - Feedback from Part 1
+- Fixed HTML validation errors from Part 1 feedback
+- Added alt attributes to all images
+- Corrected semantic structure
+- Created external stylesheet
 
-Project: Website for non-profit that cooks and distributes meals to homeless people in Johannesburg.
+### Implementation Details
+- External stylesheet: css/style.css linked to all pages
+- Used CSS Reset and :root variables for cascading
+- Typography: font-size with rem, line-height, letter-spacing
+- Layout: Flexbox for header/nav, Grid for main layout
+- Visual: color, background-color, border, box-shadow, :hover/:focus/:active
+- Responsive: relative units (%, rem), breakpoints 1024px and 768px, media queries
+- Images: max-width:100%, responsive srcset considered
 
-Pages:
-- index.html - Home
-- about.html - About Us
-- services.html - Our Impact
-- enquiry.html - Get Involved / Donation form
-- contact.html - Contact Details
-
-Structure:
-- css/style.css - Styling
-- js/script.js - JavaScript
+### Testing Evidence
+Screenshots tested in Chrome DevTools:
+- Desktop 1920px
+- Tablet 768px  
+- Mobile 375px
