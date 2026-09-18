@@ -1,0 +1,99 @@
+/* Part 2 - External Stylesheet for Part-1 */
+
+/* 2.2 Base Style + Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --dark: #111827;
+  --light: #f3f4f6;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--dark);
+  background: var(--light);
+  width: 100%;
+  padding: 1rem;
+}
+
+/* 2.3 Typography */
+h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em; }
+h2 { font-size: 2rem; font-weight: 600; margin-bottom: 0.5em; }
+h3 { font-size: 1.5rem; }
+p { margin-bottom: 1rem; font-size: 1rem; }
+
+/* 2.4 Layout - Flexbox and Grid */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: var(--white);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "main aside";
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+/* 2.5 Visual Styles + Pseudo-classes */
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: 0.3s ease;
+}
+
+a:hover { color: #1e40af; text-decoration: underline; }
+a:focus { outline: 2px solid var(--primary); outline-offset: 4px; }
+a:active { opacity: 0.7; }
+
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* 3.3 Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 3.1 Breakpoints + 3.2 Relative Units */
+@media screen and (max-width: 1024px) {
+  .main-layout { grid-template-columns: 2fr 1fr; }
+  h1 { font-size: 2.2rem; }
+}
+
+@media screen and (max-width: 768px) {
+  header { flex-direction: column; }
+  nav ul { flex-direction: column; text-align: center; margin-top: 1rem; }
+  .main-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" "aside";
+  }
+  h1 { font-size: 1.8rem; }
+}
